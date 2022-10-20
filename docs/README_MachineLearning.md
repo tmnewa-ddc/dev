@@ -36,7 +36,7 @@
     * ref: 參考資料項目(名稱, 對應的範例檔名)
     * org_x: 簡化的原始資料項目，只為了產出X（若為None，直接參考 org)
     * ref_x: 簡化的參考資料項目，只為了產出X（若為None，直接參考 ref)
-* ALG_{NAME}: int，用來記錄演算法邏輯
+* ALG_{NAME}: str，用來記錄演算法邏輯
 * META_{NAME}: DataMeta，用來記錄資料元
 
 
