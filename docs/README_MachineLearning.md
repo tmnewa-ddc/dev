@@ -88,8 +88,8 @@
     * modelData: 模型資料
     * pipeData: 中繼資料
 * 檔案
-  * {save}/{alg}_modelData.pickle: 模型資料檔案
-  * {save}/{alg}_pipeData.pickle: 中繼資料檔案
+  * {save}/{alg}_modelData.(joblib/pickle/txt): 模型資料檔案
+  * {save}/{alg}_pipeData.(joblib/pickle/txt): 中繼資料檔案
 
 
 ### 模型載入
