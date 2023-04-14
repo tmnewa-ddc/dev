@@ -3,6 +3,7 @@ import logging
 
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions, SetupOptions
+from apache_beam.runners.interactive.display import pipeline_graph
 
 
 class PrintFn(beam.DoFn):
@@ -118,7 +119,7 @@ def setLocs(values):
     return locs
 
 
-def getMemberInfo():
+def getMemberInfo(show_graph=False):
     """beam intro:
     ({Pipeline/PCollection} | {Label Text} >> {PTransform} | ...) -> {PCollection}
     """
@@ -151,6 +152,9 @@ def getMemberInfo():
             | 'Member Info' >> beam.ParDo(MemberInfoFn())
             | 'Show Info' >> beam.ParDo(PrintFn(), name='Merge Info', fmt=True)
         )
+        if show_graph:
+            print('graph:\n')
+            print(pipeline_graph.PipelineGraph(p).get_dot())
 
 
 if __name__ == '__main__':
