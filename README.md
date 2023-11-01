@@ -24,6 +24,11 @@ Git Dev Test
 *   hotfix/*：緊急修正分支，通常會開在產品分支上
 *   bug/*：臭蟲分支，修正線上發現的問題使用
 
+### Scenario
+
+go to [README_GIT_Scenario.md](docs/README_Git_Scenario.md)
+
+
 ## Git hooks tools
 
 透過 pre-commit 綁定提交前的檢查測試，確保程式碼無錯
