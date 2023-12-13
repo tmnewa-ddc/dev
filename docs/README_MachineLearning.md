@@ -5,9 +5,9 @@
 ### 基礎架構
 
 * 檔案架構
-  * main.py（操作腳本)
+  * main.py (操作腳本)
   * DataMeta.py (資料元)
-  * DataModel.py（資料模組)
+  * DataModel.py (資料模組)
   * Pipfile (使用模組紀錄，可以透過pipenv操作)
   * config/: 設定參數
   * run/ (操作細節，若需要)
@@ -34,8 +34,8 @@
     * alg: 指定要使用哪一個演算法邏輯
     * org: 原始資料項目(名稱, 對應的範例檔名)
     * ref: 參考資料項目(名稱, 對應的範例檔名)
-    * org_x: 簡化的原始資料項目，只為了產出X（若為None，直接參考 org)
-    * ref_x: 簡化的參考資料項目，只為了產出X（若為None，直接參考 ref)
+    * org_x: 簡化的原始資料項目，只為了產出X (若為None，直接參考 org)
+    * ref_x: 簡化的參考資料項目，只為了產出X (若為None，直接參考 ref)
 * ALG_{NAME}: str，用來記錄演算法邏輯
 * META_{NAME}: DataMeta，用來記錄資料元
 
@@ -68,7 +68,7 @@
       * 1: 預測用, x有值, y為None
     * origins *(dict)*: 原始資料
     * refs *(dict)*: 參考資料
-    * save *(bool)*: 儲存資料夾路徑，None為不儲存，預設為file/input
+    * save *(str)*: 儲存資料夾路徑，空字串為不儲存，預設為file/input
     * X *(pd.DataFrame)*: 自變數
     * Y *(pd.DataFrame)*: 應變數
 * 檔案
@@ -84,7 +84,7 @@
   * train(X, Y, save) -> modelData, pipeData
     * X *(pd.DataFrame)*: 自變數
     * Y *(pd.DataFrame)*: 應變數
-    * save *(bool)*: 儲存資料夾路徑，None為不儲存，預設為file/train
+    * save *(str)*: 儲存資料夾路徑，空字串為不儲存，預設為file/train
     * modelData: 模型資料
     * pipeData: 中繼資料
 * 檔案
@@ -110,7 +110,7 @@
 * 方法
   * predict(X, save) -> Y
     * X *(pd.DataFrame)*: 自變數
-    * save *(bool)*: 儲存資料夾路徑，None為不儲存，預設為file/train
+    * save *(str)*: 儲存資料夾路徑，空字串為不儲存，預設為file/train
 * 檔案
   *  {save}/{alg}_pdY.parq: 預測資料
 
